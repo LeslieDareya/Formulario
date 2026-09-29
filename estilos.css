@@ -1,0 +1,486 @@
+
+:root {
+
+
+    /* =========================
+       PALETA DE COLORES
+       ========================= */
+
+
+    /* Fondo general */
+
+    --color-fondo: #F7F7F5;
+
+
+    /* Fondo de tarjetas */
+
+    --color-superficie: #F9F1F8;
+
+
+    /* Texto principal */
+
+    --color-texto: #753A72;
+
+
+    /* Texto secundario */
+
+    --color-texto-secundario: #753A72;
+
+
+    /* Color principal */
+
+    --color-acento: #753A72;
+
+
+    /* Color del botón cuando pasas el mouse */
+
+    --color-acento-hover: #5F2F5D;
+
+
+    /* Líneas y bordes */
+
+    --color-borde: #DFD3DD;
+
+
+    /* Colores decorativos */
+
+    --color-rosa: #EBE5E5;
+
+    --color-lila: #DFD3DD;
+
+
+    /* =========================
+       TIPOGRAFÍAS
+       ========================= */
+
+    --fuente-titulos: "Poppins", sans-serif;
+
+    --fuente-cuerpo: "Inter", sans-serif;
+
+
+    /* =========================
+       OTROS
+       ========================= */
+
+    --radio: 14px;
+
+    --sombra:
+        0 8px 25px rgba(117, 58, 114, 0.10);
+
+}
+
+
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+   ===================================================== */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background-color: var(--color-fondo);
+
+    color: var(--color-texto);
+
+    font-family: var(--fuente-cuerpo);
+
+}
+
+
+/* =====================================================
+   CONTENEDOR
+   ===================================================== */
+
+.contenedor {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+
+}
+
+
+/* =====================================================
+   TARJETA PRINCIPAL
+   ===================================================== */
+
+.tarjeta {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    background-color: var(--color-superficie);
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: var(--radio);
+
+    padding: 35px;
+
+    box-shadow: var(--sombra);
+
+}
+
+
+/* =====================================================
+   ENCABEZADO
+   ===================================================== */
+
+.encabezado {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* Icono del calendario */
+
+.icono {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: var(--color-rosa);
+
+    color: var(--color-acento);
+
+    border-radius: 12px;
+
+    font-size: 25px;
+
+}
+
+
+/* Título */
+
+.encabezado h1 {
+
+    margin: 0 0 5px;
+
+    color: var(--color-texto);
+
+    font-family: var(--fuente-titulos);
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+}
+
+
+/* Descripción del encabezado */
+
+.encabezado p {
+
+    margin: 0;
+
+    color: var(--color-texto-secundario);
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   FORMULARIO
+   ===================================================== */
+
+.formulario {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+/* Fecha y hora */
+
+.fila {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+}
+
+
+/* Cada campo */
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+/* Texto de los labels */
+
+.campo label {
+
+    color: var(--color-texto);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================================
+   INPUTS
+   ===================================================== */
+
+.campo input,
+.campo select,
+.campo textarea {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: 9px;
+
+    background-color: #FFFFFF;
+
+    color: var(--color-texto);
+
+    font-family: var(--fuente-cuerpo);
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+
+}
+
+
+/* Área de descripción */
+
+.campo textarea {
+
+    resize: vertical;
+
+    min-height: 100px;
+
+}
+
+
+/* =====================================================
+   EFECTO AL SELECCIONAR UN CAMPO
+   ===================================================== */
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+
+    border-color: var(--color-acento);
+
+    box-shadow:
+        0 0 0 3px rgba(117, 58, 114, 0.12);
+
+}
+
+
+/* =====================================================
+   PLACEHOLDER
+   ===================================================== */
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+
+    color: #753A72;
+
+    opacity: 0.65;
+
+}
+
+
+/* =====================================================
+   BOTONES
+   ===================================================== */
+
+.acciones {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 10px;
+
+}
+
+
+/* Estilo general de los botones */
+
+.boton {
+
+    border-radius: 9px;
+
+    padding: 12px 20px;
+
+    font-family: var(--fuente-cuerpo);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+/* =====================================================
+   BOTÓN GUARDAR
+   ===================================================== */
+
+.boton-principal {
+
+    border: none;
+
+    background-color: var(--color-acento);
+
+    color: #FFFFFF;
+
+}
+
+
+.boton-principal:hover {
+
+    background-color: var(--color-acento-hover);
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =====================================================
+   BOTÓN CANCELAR
+   ===================================================== */
+
+.boton-secundario {
+
+    background-color: #FFFFFF;
+
+    color: var(--color-texto);
+
+    border: 1px solid var(--color-borde);
+
+}
+
+
+.boton-secundario:hover {
+
+    background-color: var(--color-rosa);
+
+}
+
+
+/* =====================================================
+   EFECTO AL HACER CLIC
+   ===================================================== */
+
+.boton:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* =====================================================
+   DISEÑO PARA CELULAR
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+
+    /* Reducimos el espacio */
+
+    .contenedor {
+
+        padding: 20px 12px;
+
+    }
+
+
+    /* Tarjeta más pequeña */
+
+    .tarjeta {
+
+        padding: 25px 20px;
+
+    }
+
+
+    /* Fecha y hora pasan a una sola columna */
+
+    .fila {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* Botones uno debajo del otro */
+
+    .acciones {
+
+        flex-direction: column-reverse;
+
+    }
+
+
+    /* Botones ocupan todo el ancho */
+
+    .boton {
+
+        width: 100%;
+
+    }
+
+}
+
